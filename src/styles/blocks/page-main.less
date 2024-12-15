@@ -1,0 +1,49 @@
+.main {
+    flex: 1 0 auto;
+}
+
+.page-main {
+    &_title, &_subtitle {
+        font-size: 40px;
+        color: @black;
+        text-shadow:
+            0 0 16px,
+            0 0 7px currentColor;
+        text-align: center;
+        margin: 0;
+        padding: 60px 0;
+    }
+    &_lenni {
+        width: 100%;
+    }
+    &_choice {
+        text-align: center;
+    }
+}
+
+.choice {
+    width: 100%;
+    &_title {
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    &_btn-container {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-evenly;
+    }
+    &_btn-r {
+        width: 300px;
+        border: 1px solid #bc3324;
+        color: @white;
+        background-color: #bc3324;
+        &:hover {
+            color: @black;
+            background-color: @white;
+            border: 1px solid @black;
+        }
+    }
+    &_btn-b {
+        width: 300px;
+    }
+}
