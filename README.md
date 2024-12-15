@@ -1,2 +1,2 @@
-# Mrmaximca.github.io/dist
+# Mrmaximca.github.io
 # Academy TUSUR
