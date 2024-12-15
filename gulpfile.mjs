@@ -28,10 +28,10 @@ const resources = {
     "src/assets/icons/**/*.*",
     "src/assets/favicons/**/*.*",
     "src/assets/fonts/**/*.{woff,woff2}",
-    // "src/assets/video/**/*.{mp4,webm}",
-    // "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
-    // "src/json/**/*.json",
-    // "src/php/**/*.php"
+    "src/assets/video/**/*.{mp4,webm}",
+    "src/assets/audio/**/*.{mp3,ogg,wav,aac}",
+    "src/json/**/*.json",
+    "src/php/**/*.php"
   ]
 };
 // Gulp Tasks:
@@ -89,15 +89,13 @@ function js() {
     .pipe(gulp.dest("dist/scripts"));
 }
 function jsCopy() {
-  return gulp
-    .src(resources.jsVendor)
-    .pipe(plumber())
-    .pipe(gulp.dest("dist/scripts"));
+  return gulp.src(resources.jsVendor).pipe(plumber()).pipe(gulp.dest("dist/scripts"));
 }
 function copy() {
   return gulp
     .src(resources.static, {
-      base: "src"
+      base: "src",
+      encoding: false
     })
     .pipe(gulp.dest("dist/"));
 }
@@ -108,7 +106,7 @@ function images() {
       imagemin([
         imagemin_gifsicle({ interlaced: true }),
         imagemin_mozjpeg({ quality: 100, progressive: true }),
-        imagemin_optipng({ optimizationLevel: 3 })
+        imagemin_optipng({ optimizationLevel: 5 })
       ])
     )
     .pipe(gulp.dest("dist/assets/images"));
@@ -131,16 +129,7 @@ function svgSprite() {
     .pipe(rename("symbols.svg"))
     .pipe(gulp.dest("dist/assets/icons"));
 }
-const build = gulp.series(
-  clean,
-  copy,
-  includeHtml,
-  style,
-  js,
-  jsCopy,
-  images,
-  svgSprite
-);
+const build = gulp.series(clean, copy, includeHtml, style, js, jsCopy, images, svgSprite);
 function reloadServer(done) {
   server.reload();
   done();
@@ -158,16 +147,4 @@ function serve() {
   gulp.watch(resources.svgSprite, gulp.series(svgSprite, reloadServer));
 }
 const start = gulp.series(build, serve);
-export {
-  clean,
-  copy,
-  includeHtml,
-  style,
-  js,
-  jsCopy,
-  images,
-  svgSprite,
-  build,
-  serve,
-  start
-};
+export { clean, copy, includeHtml, style, js, jsCopy, images, svgSprite, build, serve, start };
