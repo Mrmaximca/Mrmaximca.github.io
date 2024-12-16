@@ -15,7 +15,7 @@
     <header class="page-header">
       <div class="page-header_container">
         <a href="index.html" class="page-header_logo">
-          <svg class="page-header_logo-icon" width="202" height="147">
+          <svg class="page-header_logo-icon">
             <use xlink:href="assets/icons/symbols.svg#logo"></use>
           </svg>
         </a>
@@ -25,19 +25,34 @@
           <a href="#" class="page-header_nav-link">О нас</a>
           <a href="#" class="page-header_nav-link">Контакты</a>
         </nav>
+        <div class="page-header_nav-user">
+          <a href="#" class="page-header_nav-user-link"> Александр С. </a>
+          <a href="#" class="page-header_nav-logout">
+            <svg class="page-header_nav-logout-icon" width="24" height="24">
+              <use xlink:href="assets/icons/symbols.svg#door"></use>
+            </svg>
+          </a>
+        </div>
         <div class="page-header_right-block">
-          <a href="#" class="btn user-btn"> Войти </a>
+          <a href="#" class="btn page-header_user-btn">
+            Войти
+            <svg class="page-header_user-icon" width="21" height="18">
+              <use xlink:href="assets/icons/symbols.svg#user"></use>
+            </svg>
+          </a>
+          <button type="button" class="page-header_nav-toggle"></button>
         </div>
       </div>
     </header>
   </div>
+
   <main class="main">
     <article class="article">
       <div class="article__container">
         <h1 class="article__title title">Вечер | The Best of Sade</h1>
         <div class="article__content content">
           <picture class="article__picture">
-            <img src="assets/images/events/Вечер.svg" alt="evening" class="article__pic" />
+            <img src="assets/images/events/Sade.svg" alt="evening" class="article__pic" />
           </picture>
           <!-- <h1>Заголовок h1</h1>
         <h2>Заголовок h2</h2>
@@ -90,6 +105,7 @@
       </div>
     </article>
     <article class="event">
+
       <form class="reserve event__reserve">
         <div class="reserve__checks">
           Чекбоксы
@@ -106,6 +122,7 @@
       </form>
     </article>
   </main>
+
   <footer class="page-footer">
     <div class="page-footer__first">
       <div class="page-footer__line"></div>

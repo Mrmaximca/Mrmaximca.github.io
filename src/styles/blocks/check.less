@@ -9,8 +9,10 @@
     padding-left: 24px;
     color: @black;
     cursor: pointer;
+
     &__input{
         .is-hidden();
+
         &:checked {
             & ~ .check__mark {
               background-color: @black;
@@ -29,6 +31,7 @@
             }
         }
     }
+
     &__mark {
         box-sizing: border-box;
         display: block;
@@ -39,6 +42,7 @@
         height: 24px;
         border: 1px solid @black;
     }
+
     &__label {
         margin-left: 15px;
         font-weight: 300;

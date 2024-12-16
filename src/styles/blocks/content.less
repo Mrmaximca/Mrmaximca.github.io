@@ -5,57 +5,80 @@
     font-weight: 400;
     font-style: normal;
     line-height: 1.375;
-    word-wrap: break-word;
-    h1, h2, h4, h4, h5, h6 {
+    word-wrap: break-word; // перенос текста по словам
+
+    h1,
+    h2,
+    h4,
+    h4,
+    h5,
+    h6 {
       margin: 1.3em 0 0.8em;
       font-family: @font1;
       color: @black;
       font-weight: 600;
+      
       &:first-child {
         margin-top: 0;
       }
+
       &:last-child {
         margin-bottom: 0;
       }
     }
+
     h1 {
       font-size: 32px;
     }
+
     h2 {
       font-size: 28px;
     }
+
     h3 {
       font-size: 24px;
     }
+
     h4 {
       font-size: 20px;
     }
+
     h5 {
       font-size: 18px;
     }
+
     h6 {
       font-size: 16px;
     }
-    ol, ul, p {
+
+    ol,
+    ul,
+    p {
       margin: 20px 0;
       font-family: @font1;
       max-width: 868px;
+      
       &:first-child {
         margin-top: 0;
       }
+
       &:last-child {
         margin-bottom: 70px;
       }
     }
+
     p {
       margin-bottom: 70px;
     }
-    ul, ol {
+
+    ul,
+    ol {
       position: relative;
       padding: 0;
       list-style: none;
       font-family: @font1;
     }
+
     ul > li {
       box-sizing: border-box;
       position: relative;
@@ -73,10 +96,12 @@
         pointer-events: none;
       }
     }
+
     ol {
       counter-reset: li;
       padding: 0;
     }
+
     ol > li {
       counter-increment: li;
       &::before {
@@ -88,36 +113,49 @@
         white-space: pre;
       }
     }
-    ul > li, ol > li {
+
+    ul > li,
+    ol > li {
       margin: 0 0 8px;
       cursor: default;
       &:last-child {
         margin-bottom: 70px;
       }
     }
-    img, iframe, figure {
+    
+    img,
+    iframe,
+    figure {
       display: block;
       max-width: 700px;
     }
-    & > img, & > iframe, & > figure {
+
+    & > img,
+    & > iframe,
+    & > figure {
       margin: 30px 0;
+      
       &:first-child {
         margin-top: 0;
       }
+
       &:last-child {
         margin-bottom: 0;
       }
     }
+
     iframe {
       border: none;
       outline: none;
     }
+
     figure {
       img {
         max-width: 100%;
         margin: 0;
       }
     }
+
     figcaption {
       margin: 15px 0;
       color: fade(@black, 60%);
@@ -131,28 +169,35 @@
         margin-bottom: 0;
       }
     }
+
     img {
-      &[align], &.alignright {
+      &[align],
+      &.alignright {
         margin: 5px 0;
         & + figcaption {
           display: none;
         }
       }
+
       &[align="right"],
       &.alignright {
         margin-left: 10px;
       }
+
       &.alignright {
         float: right;
       }
+
       &[align="left"],
       &.alignleft {
         margin-right: 10px;
       }
+
       &.alignleft {
         float: left;
       }
     }
+
     a {
       font-weight: 600;
       color: @black;
@@ -163,6 +208,7 @@
         text-decoration-color: transparent;
       }
     }
+
     blockquote {
         box-sizing: border-box;
       position: relative;
@@ -188,6 +234,7 @@
         background-color: @red;
       }
     }
+
     b {
       font-weight: 700;
     }

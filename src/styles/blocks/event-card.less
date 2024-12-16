@@ -3,6 +3,7 @@
     width: 405px;
     max-width: 100%;
     min-width: 280px;
+    
     &__link {
     display: flex;
     flex-direction: column;
@@ -10,6 +11,7 @@
     color: @black;
     text-decoration: none;
     }
+
     &__picture {
         display: block;
         position: relative;
@@ -19,12 +21,14 @@
         text-decoration: none;
         overflow: hidden;
     }
+
     &__picture::after {
         content: "";
         display: block;
         width: 100%;
         padding-top: 107.16%;
     }
+
     &__img {
         display: block;
         position: absolute;
@@ -34,6 +38,7 @@
         height: 100%;
         object-fit: cover;
     }
+
     &__title {
         margin: 0 0 15px;
         min-height: 66px;
@@ -43,33 +48,40 @@
         line-height: 33px;
         text-decoration: underline transparent;
         transition: color 0.2s, text-decoration-color 0.2s;
+
         @media @bw1660 {
             margin: 0 0 10px;
         }
+        
         @media @bw1340 {
             min-height: 54px;
             font-size: 20px;
             line-height: 27px;
         }
+        
         @media @bw768 {
             min-height: 44px;
             font-size: 16px;
             line-height: 22px;
         }
     }
-    &__title:hover {
+
+    &__title:hover{
         color: @red;
         text-decoration-color: @red;
     }
+
     &__description {
         margin: 0 0 auto;
         font-size: 16px;
         line-height: 22px;
+
         @media @bw1020 {
             font-size: 14px;
             line-height: 19px;
         }
     }
+
     &__time {
         margin: 15px 0 0;
         font-weight: 300;

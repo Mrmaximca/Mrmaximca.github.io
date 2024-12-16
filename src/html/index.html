@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
-    @@include('blocks/head.html')
+    <head>
+        @@include('blocks/head.html')
+    </head>
 
         <body class="body">
             @@include('blocks/page-header.html')
-
+            <div class="page-main">
+                <h1 class="page-main_title">АРТ — ПРОСТРАНСТВО</h1>
+                <img class="page-main_lenni" src="assets/images/LENNI.svg">
+                <h1 class="page-main_subtitle">ДЛЯ ЛЮДЕЙ, ГОРЯЩИХ СЕРДЦЕМ И ДЕЛОМ<br>МЕСТО ДЛЯ НАСТОЯЩЕГО</h1>
+                <div class="page-main_choice choice">
+                  <h1 class="choice_title">Я хочу:</h1>
+                  <div class="choice_btn-container">
+                    <button class="choice_btn-r btn">Провести мероприятие</button>
+                    <button class="choice_btn-b btn">Стать арендатором</button>
+                  </div>
+                </div>
+              </div>
             <main class="main">
+                <section class="listing events_listing">
                 <h2 class="listing__title section-title">О нас</h2>
                 @@include('blocks/about.html')
                 <div class="events">
@@ -17,7 +31,7 @@
                              @@loop('blocks/event-card.html', [
                                 {
                                     "class": "listing__event-card",
-                                    "img": "assets/images/events/Nirvana.jpg",
+                                    "img": "assets/images/events/Nirvana.svg",
                                     "alt": "nirvana",
                                     "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
                                     "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
@@ -26,7 +40,7 @@
                                 },
                                 {
                                     "class": "listing__event-card",
-                                    "img": "assets/images/events/HowStuffWorks.jpg",
+                                    "img": "assets/images/events/HowStuffWorks.svg",
                                     "alt": "stuff",
                                     "title": "Есть тема, нужно обсудить с HowStuffWorks",
                                     "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи: от игрушек до водяных дамб.",
@@ -35,7 +49,7 @@
                                 }, 
                                 {
                                     "class": "listing__event-card",
-                                    "img": "assets/images/events/Вечер.svg",
+                                    "img": "assets/images/events/Sade.svg",
                                     "alt": "evening",
                                     "title": "Вечер | The Best of Sade",
                                     "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-н-блюза и фанка.",
@@ -60,7 +74,7 @@
                                       @@loop('blocks/article-card.html', [
                                         {
                                           "class": "listing__article-card",
-                                          "img": "assets/images/blog/theatre.jpg",
+                                          "img": "assets/images/blog/theatre.svg",
                                           "alt": "Theatre Photosession",
                                           "title": "Фотосессия в стенах Театра драмы",
                                           "descr": "Организовывая фотосессию для локального бренда одежды мы смогли воплотить все пожелания заказчика и у нас получилась отличная работа. Смотрите как это было",
@@ -69,7 +83,7 @@
                                         }, 
                                         {
                                             "class": "listing__article-card",
-                                            "img": "assets/images/blog/выставка VR.png",
+                                            "img": "assets/images/blog/VR.svg",
                                             "alt": "VR exhibition",
                                             "title": "Выставка VR в Томске",
                                             "descr": "Клуб виртуальной реальности - это другие миры. яркие эмоции. новый опыт. ... Мы предоставляем нашим клиентам лучший игровой VR-опыт в Томске.",
@@ -78,7 +92,7 @@
                                         },
                                         {
                                             "class": "listing__article-card",
-                                            "img": "assets/images/blog/rocking radio.png",
+                                            "img": "assets/images/blog/radio.svg",
                                             "alt": "Rock radio",
                                             "title": "Rocking radio в заброшенном ангаре",
                                             "descr": "15 электрогенераторов, километры проводов и пару тонн света. Все это для того, чтобы организовать лучшую вечеринку года для ребят из Новосибирска.",

@@ -5,7 +5,8 @@
     margin-top: 70px;
     padding-left: 40px;
     padding-right: 40px;
-    background-color: @grey;
+    background-color: @gray;
+
     &__first {
         box-sizing: border-box;
         display: flex;
@@ -14,24 +15,30 @@
         padding-left: 40px;
         padding-right: 40px;
     }
+
     &__line {
         height: 2px;
         width: 618px;
         margin-right: 50px;
         background-color: rgba(28, 27, 27, 1);
+
         &:last-child {
             margin-right: 0;
         }
     }
-    &__container, &__buttons {
+
+    &__container,
+    &__buttons {
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
         position: relative;
     }
+
     &__buttons {
         margin-bottom: 15px;
     }
+
     &__list {
         box-sizing: border-box;
         display: flex;
@@ -52,6 +59,7 @@
             margin-left: 40px;
         }
     }
+
     a {
         font-weight: 600;
         font-size: 16px;
@@ -69,6 +77,7 @@
             margin-bottom: 0;
         }
     }
+
     &__check {
         box-sizing: border-box;
         display: flex;
@@ -77,11 +86,13 @@
         margin-left: 600px;
         margin-top: 45px;
     }
+
     p {
         font-weight: 600;
         font-size: 16px;
         color: @black;
     }
+
     &__field-input {
         box-sizing: border-box;
         display: block;
@@ -94,6 +105,7 @@
         height: 49px;
         padding-left: 30px;
     }
+
     &__btn {
         display: inline-block;
         box-sizing: border-box;
