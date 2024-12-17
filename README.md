@@ -1,5 +1,5 @@
-# [github](https://github.com/Mrmaximca/Mrmaximca.github.io)
+# [Сайт](https://mrmaximca.github.io/dist/)
 
-# [Mrmaximca.github.io/dist](https://mrmaximca.github.io/dist/)
+# [GitHub](https://github.com/Mrmaximca/Mrmaximca.github.io)
 
 # [Academy TUSUR](https://it.tusur.ru)
